@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F1F5F9">
+    <title>ANEES | موقعي الشخصي</title>
+    
+    <!-- وصف الموقع لمحركات البحث (SEO) -->
+    <meta name="description" content="الموقع الشخصي لأنيس، طالب دبلوم تقنية معلومات في كلية المجتمع عدن. أعرض فيه مهاراتي في البرمجة، الشبكات، وتطوير المواقع.">
+    <meta name="keywords" content="أنيس, ANEES, تقنية معلومات, مبرمج, تطوير مواقع, شبكات, عدن, بورتفوليو">
+    <meta name="author" content="Anees">
+
+    <!-- البطاقة التعريفية عند مشاركة الرابط -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ANEES | موقعي الشخصي">
+    <meta property="og:description" content="طالب دبلوم تقنية معلومات ومهتم بتطوير المواقع والشبكات. تصفح مهاراتي ومشاريعي.">
+    <meta property="og:image" content="images/portfolio-preview.jpg">
+
+    <!-- خط عربي احترافي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- مكتبات الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- ملف التنسيق -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- شاشة التحميل (Preloader) -->
+<div id="preloader">
+    <div class="loader-content">
+        <h1>ANEES.</h1>
+        <div class="loader-bar"></div>
+    </div>
+</div>
+
+<header class="header">
+    <h2>ANEES.</h2>
+
+    <div class="menu-header">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="تفعيل الوضع الليلي">🌙</button>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+
+    <nav id="main-nav" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من أنا</a>
+        <a href="#personal-info">معلوماتي</a>
+        <a href="#journey">رحلتي</a>
+        <a href="#skills">مهاراتي</a>
+        <a href="#projects">مشاريعي</a>
+        <a href="#contact">تواصل معي</a>
+    </nav>
+</header>
+
+<main class="card" id="home">
+    <!-- صورة الملف الشخصي -->
+    <img src="images/profile.jpg" alt="الصورة الشخصية لأنيس" class="avatar">
+    
+    <h1>مرحباً، أنا أنيس</h1>
+    <h3 class="typing-heading">
+        <span id="typing-text">طالب دبلوم تقنية معلومات</span>
+        <span class="typing-cursor">|</span>
+    </h3>
+    <p>أسعى لتعلم تصميم وتطوير المواقع الإلكترونية وبناء مشاريع إبداعية.</p>
+    
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+        <button type="button" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">اكتشف موقعي</button>
+        <a href="cv.pdf" class="cv-btn" target="_blank" download>
+            <i class="fa-solid fa-download"></i> تحميل السيرة الذاتية
+        </a>
+    </div>
+
+    <h2>هواياتي</h2>
+    <div class="hobbies">
+        <div class="hobby"><i class="fa-solid fa-code" style="color: #2563EB;"></i> البرمجة</div>
+        <div class="hobby"><i class="fa-solid fa-palette" style="color: #2563EB;"></i> التصميم</div>
+    </div>
+</main>
+
+<section class="about" id="about">
+    <div class="about-icon"><i class="fa-solid fa-user-tie" style="color: #2563EB;"></i></div>
+    <h2>من أنا؟</h2>
+    <h3 class="about-name">مرحباً، أنا أنيس 👋</h3>
+    <p>أنا أنيس، طالب دبلوم تقنية معلومات في كلية المجتمع عدن. أهتم بعالم التكنولوجيا والبرمجة وتطوير المواقع الإلكترونية.</p>
+    <p>أسعى إلى تطوير مهاراتي في البرمجة والشبكات وقواعد البيانات والأمن السيبراني، وأعمل على تحويل أفكاري إلى مشاريع تقنية مفيدة ومبتكرة.</p>
+
+    <div class="about-goal">
+        <i class="fa-solid fa-bullseye" style="color: #2563EB;"></i>
+        <h3>طموحي المستقبلي</h3>
+        <p>أن أصبح مطور مواقع محترفاً ومتخصصاً في الشبكات، وأن أواصل التعلم والإبداع في عالم التقنية.</p>
+    </div>
+
+    <div class="about-tags">
+        <span><i class="fa-solid fa-code"></i> البرمجة</span>
+        <span><i class="fa-solid fa-network-wired"></i> الشبكات</span>
+        <span><i class="fa-solid fa-rocket"></i> الابتكار</span>
+    </div>
+</section>
+
+<section class="about personal-info" id="personal-info">
+    <div class="about-icon"><i class="fa-solid fa-id-card" style="color: #2563EB;"></i></div>
+    <h2>معلوماتي الشخصية</h2>
+    <p>نبذة عن دراستي واهتماماتي ومجالي التقني.</p>
+
+    <div class="info-grid">
+        <div class="info-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>المؤهل الدراسي</h3>
+            <p>دبلوم</p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>التخصص</h3>
+            <p>تقنية معلومات</p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>المؤسسة التعليمية</h3>
+            <p>كلية المجتمع عدن</p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-globe"></i>
+            <h3>مجالات الاهتمام</h3>
+            <p>البرمجة والشبكات</p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>مجالات التعلم</h3>
+            <p>الأمن السيبراني وقواعد البيانات</p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-rocket"></i>
+            <h3>هدفي</h3>
+            <p>أن أصبح مطوراً محترفاً</p>
+        </div>
+    </div>
+</section>
+
+<!-- قسم رحلتي -->
+<section id="journey" class="journey">
+    <h2>رحلتي في التعلم</h2>
+    <p>محطاتي وتطوري في عالم التقنية خطوة بخطوة 🚀</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+                <h3><i class="devicon-html5-plain colored"></i> البدايات (HTML & CSS)</h3>
+                <p>بدأت رحلتي في عالم الويب بتعلم لغة HTML لبناء الهياكل، ثم CSS لتنسيق التصميم وإعطاء الموقع شكله الجميل.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+                <h3><i class="devicon-javascript-plain colored"></i> التفاعل والبرمجة (JS & Python)</h3>
+                <p>انتقلت لإضافة الحياة للمواقع عبر تعلم JavaScript، وبدأت في نفس الوقت استكشاف أساسيات البرمجة باستخدام Python و C++.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2024 - 2025</div>
+            <div class="timeline-content">
+                <h3><i class="fa-solid fa-wifi" style="color: #2563EB;"></i> عالم الشبكات (CCNA)</h3>
+                <p>دخلت مجال الشبكات، وتعلمت أساسيات إدارة الشبكات باستخدام Packet Tracer، وكيفية ربط الأجهزة وتأمينها.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+                <h3><i class="fa-solid fa-database" style="color: #2563EB;"></i> قواعد البيانات (SQL & Oracle)</h3>
+                <p>تعمقت في إدارة البيانات وتعلمت كيفية تصميم قواعد البيانات، وكتابة الاستعلامات المعقدة باستخدام SQL و Oracle.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-content">
+                <h3><i class="fa-solid fa-rocket" style="color: #2563EB;"></i> المستقبل (Full Stack)</h3>
+                <p>أعمل حالياً على تطوير مهاراتي لأصبح مطور Full Stack، مع التركيز على الأمن السيبراني وإدارة المشاريع عبر GitHub.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2>مهاراتي التقنية</h2>
+    <p>رحلتي في تعلم تقنية المعلومات وتطوير مهاراتي باستمرار 🚀</p>
+
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3><i class="devicon-html5-plain colored"></i> HTML</h3>
+            <p>بناء صفحات المواقع</p>
+            <div class="progress"><span style="--level:70%"></span></div>
+            <small>مستوى التعلم: 70%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-css3-plain colored"></i> CSS</h3>
+            <p>تصميم وتنسيق المواقع</p>
+            <div class="progress"><span style="--level:55%"></span></div>
+            <small>مستوى التعلم: 55%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-javascript-plain colored"></i> JavaScript</h3>
+            <p>إضافة التفاعل للمواقع</p>
+            <div class="progress"><span style="--level:30%"></span></div>
+            <small>مستوى التعلم: 30%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-python-plain colored"></i> Python</h3>
+            <p>أساسيات البرمجة</p>
+            <div class="progress"><span style="--level:25%"></span></div>
+            <small>مستوى التعلم: 25%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-cplusplus-plain colored"></i> C++</h3>
+            <p>مبادئ البرمجة والخوارزميات</p>
+            <div class="progress"><span style="--level:25%"></span></div>
+            <small>مستوى التعلم: 25%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-brands fa-windows" style="color: #2563EB;"></i> Visual Basic</h3>
+            <p>تطوير البرامج المكتبية</p>
+            <div class="progress"><span style="--level:25%"></span></div>
+            <small>مستوى التعلم: 25%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-azuresqldatabase-plain colored"></i> SQL</h3>
+            <p>إدارة قواعد البيانات</p>
+            <div class="progress"><span style="--level:25%"></span></div>
+            <small>مستوى التعلم: 25%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-oracle-original colored"></i> Oracle</h3>
+            <p>قواعد البيانات والاستعلامات</p>
+            <div class="progress"><span style="--level:20%"></span></div>
+            <small>مستوى التعلم: 20%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-network-wired" style="color: #2563EB;"></i> Networking</h3>
+            <p>شبكات الحاسوب والاتصالات</p>
+            <div class="progress"><span style="--level:45%"></span></div>
+            <small>مستوى التعلم: 45%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-satellite-dish" style="color: #2563EB;"></i> CCNA</h3>
+            <p>أساسيات إدارة الشبكات</p>
+            <div class="progress"><span style="--level:20%"></span></div>
+            <small>مستوى التعلم: 20%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-diagram-project" style="color: #2563EB;"></i> Packet Tracer</h3>
+            <p>محاكاة الشبكات</p>
+            <div class="progress"><span style="--level:25%"></span></div>
+            <small>مستوى التعلم: 25%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-windows8-original colored"></i> Windows</h3>
+            <p>التعامل مع أنظمة التشغيل</p>
+            <div class="progress"><span style="--level:50%"></span></div>
+            <small>مستوى التعلم: 50%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-linux-plain colored"></i> Linux</h3>
+            <p>أساسيات نظام لينكس</p>
+            <div class="progress"><span style="--level:20%"></span></div>
+            <small>مستوى التعلم: 20%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-shield-halved" style="color: #2563EB;"></i> Cybersecurity</h3>
+            <p>مبادئ الأمن السيبراني</p>
+            <div class="progress"><span style="--level:15%"></span></div>
+            <small>مستوى التعلم: 15%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="devicon-git-plain colored"></i> Git & GitHub</h3>
+            <p>إدارة المشاريع البرمجية</p>
+            <div class="progress"><span style="--level:15%"></span></div>
+            <small>مستوى التعلم: 15%</small>
+        </div>
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-mobile-screen-button" style="color: #2563EB;"></i> Acode</h3>
+            <p>تطوير المواقع من الهاتف</p>
+            <div class="progress"><span style="--level:60%"></span></div>
+            <small>مستوى التعلم: 60%</small>
+        </div>
+    </div>
+    <p class="skills-note">📌 هذه النسب تقديرية ومبدئية، وقابلة للتحديث مع تطور مهاراتي.</p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>مشاريعي ورحلتي في التطوير</h2>
+    <p>هنا أعرض مشاريعي وتجربتي في تعلم وتطوير تقنية المعلومات 🚀</p>
+
+    <div class="projects-container">
+        <!-- المشروع الأول -->
+        <div class="project-card">
+            <img class="project-image" src="images/website.jpg" alt="موقع ANEES" loading="lazy">
+            <h3>موقعي الشخصي ANEES</h3>
+            <p>موقعي الشخصي الذي أعرض فيه نبذة عني، ومهاراتي ومشاريعي في مجال تقنية المعلومات.</p>
+            <span class="project-status in-progress"><i class="fa-solid fa-gear"></i> قيد التطوير</span>
+            <button type="button" class="project-button" disabled>أنت تتصفح هذا المشروع</button>
+        </div>
+
+        <!-- المشروع الثاني -->
+        <div class="project-card">
+            <img class="project-image" src="images/calculator.jpg" alt="الآلة الحاسبة" loading="lazy">
+            <h3>الآلة الحاسبة</h3>
+            <p>تطبيق حاسبة تفاعلي لتنفيذ العمليات الحسابية، تم تطويره باستخدام HTML وCSS وJavaScript.</p>
+            <span class="project-status in-progress"><i class="fa-solid fa-circle-check"></i> جاهز للتجربة</span>
+            <a href="calculator/index.html" class="project-button" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-rocket"></i> تشغيل الآلة الحاسبة</a>
+        </div>
+
+        <!-- المشروع الثالث -->
+        <div class="project-card">
+            <img class="project-image" src="images/network.jpg" alt="أكاديمية الشبكات" loading="lazy">
+            <h3>أكاديمية الشبكات</h3>
+            <p>مشروع تعليمي تفاعلي لتعلم شبكات الحاسوب، يضم 30 درساً موزعة على 6 مستويات مع أسئلة.</p>
+            <span class="project-status in-progress"><i class="fa-solid fa-globe"></i> قيد التطوير</span>
+            <a href="network/index.html" class="project-button" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> استكشف الأكاديمية</a>
+        </div>
+
+        <!-- المشروع الرابع -->
+        <div class="project-card future-project">
+            <img class="project-image" src="images/future.jpg" alt="مشاريع مستقبلية" loading="lazy">
+            <h3>مشاريع قادمة</h3>
+            <p>أعمل على تطوير مهاراتي البرمجية، وأسعى إلى تنفيذ أفكار ومشاريع تقنية جديدة في المستقبل.</p>
+            <span class="project-status planned"><i class="fa-solid fa-wand-magic-sparkles"></i> قريباً</span>
+            <button type="button" class="project-button" disabled>ترقبوا المشاريع القادمة</button>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>تواصل معي</h2>
+    <p>يسعدني تواصلك معي لأي استفسار أو تعاون. اترك رسالتك وسأرد عليك في أقرب وقت.</p>
+
+    <!-- استبدل YOUR_FORM_ID بالكود الخاص بك من Formspree -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <div class="input-group">
+            <input type="text" name="name" placeholder="الاسم الكامل" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        </div>
+        <div class="input-group">
+            <textarea name="message" rows="5" placeholder="رسالتك هنا..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> إرسال الرسالة</button>
+    </form>
+
+    <div class="contact-divider"><span>أو</span></div>
+
+    <a href="https://wa.me/967779575582" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> تواصل معي عبر واتساب</a>
+</section>
+
+<footer>
+    ANEES © 2026
+</footer>
+
+<button type="button" id="back-to-top" title="الرجوع إلى الأعلى" aria-label="الرجوع إلى أعلى الصفحة"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // 1. إخفاء شاشة التحميل
+    const preloader = document.getElementById("preloader");
+    function hidePreloader() {
+        if (preloader) preloader.classList.add("hidden");
+    }
+    window.addEventListener("load", () => setTimeout(hidePreloader, 800));
+    setTimeout(hidePreloader, 3000);
+
+    // 2. الوضع الليلي
+    const themeButton = document.getElementById("theme-toggle");
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("dark-mode", isDark);
+        if (themeButton) themeButton.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        try { localStorage.setItem("anees-theme", theme); } catch (error) {}
+    }
+    let savedTheme = "light";
+    try { savedTheme = localStorage.getItem("anees-theme") || "light"; } catch (error) {}
+    applyTheme(savedTheme);
+    if (themeButton) {
+        themeButton.addEventListener("click", function () {
+            applyTheme(document.body.classList.contains("dark-mode") ? "light" : "dark");
+        });
+    }
+
+    // 3. قائمة الجوال
+    const menuButton = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+    if (menuButton && mainNav) {
+        menuButton.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = mainNav.classList.toggle("active");
+            document.body.classList.toggle("menu-open", isOpen);
+            menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+        mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+            mainNav.classList.remove("active");
+            document.body.classList.remove("menu-open");
+            menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }));
+    }
+
+    // 4. زر الرجوع للأعلى
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+        if (backToTop) backToTop.classList.toggle("show", window.scrollY > 300);
+    });
+    if (backToTop) {
+        backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    }
+
+    // 5. تأثير الكتابة
+    const typingText = document.getElementById("typing-text");
+    if(typingText) {
+        const phrases = ["طالب دبلوم تقنية معلومات", "مهتم بتطوير المواقع", "أتعلم البرمجة والتصميم"];
+        let phraseIndex = 0, charIndex = 0, deleting = false;
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIndex];
+            if (deleting) charIndex--; else charIndex++;
+            typingText.textContent = currentPhrase.substring(0, charIndex);
+            let speed = deleting ? 50 : 100;
+            if (!deleting && charIndex === currentPhrase.length) { deleting = true; speed = 1500; }
+            else if (deleting && charIndex === 0) { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; speed = 400; }
+            setTimeout(typeEffect, speed);
+        }
+        typeEffect();
+    }
+
+    // 6. الظهور التدريجي
+    const elements = document.querySelectorAll("section, .project-card");
+    elements.forEach(el => el.classList.add("reveal"));
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    elements.forEach(el => observer.observe(el));
+
+    // 7. أشرطة المهارات
+    const progressBars = document.querySelectorAll('.progress span');
+    progressBars.forEach(bar => bar.style.width = '0%');
+    const skillsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                progressBars.forEach(bar => bar.style.width = bar.style.getPropertyValue('--level'));
+                skillsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    const skillsSection = document.querySelector('.skills');
+    if (skillsSection) skillsObserver.observe(skillsSection);
+
+    // 8. ScrollSpy
+    const sections = document.querySelectorAll("main[id], section[id]");
+    const navLinks = document.querySelectorAll("#main-nav a");
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                navLinks.forEach(link => {
+                    link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+                });
+            }
+        });
+    }, { rootMargin: "-20% 0px -60% 0px" });
+    sections.forEach(section => scrollSpyObserver.observe(section));
+
+});
+</script>
+
+</body>
+                  </html>
