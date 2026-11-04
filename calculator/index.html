@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3b82f6">
+<link rel="manifest" id="manifest-link">
+<title>آلة حاسبة علمية</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <!-- هنا يظهر شعارك من مجلد images -->
+    <img id="brandLogo" src="images/logo.png" alt="logo" style="display:none">
+    <div id="brandFallback" class="fallback-logo">🧮</div>
+    <div class="brand-text">
+      <span class="brand-title" id="brandTitle">آلة حاسبة علمية</span>
+      <span class="brand-sub" id="brandSub">احترافية • سريعة • آمنة</span>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn" id="themeBtn" title="Theme">🌙</button>
+    <button class="icon-btn" id="langBtn" title="Language">EN</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="calc"><span>🧮</span><span class="tab-label" data-i18n="tab_calc">الحاسبة</span></button>
+  <button class="tab-btn" data-tab="convert"><span>📏</span><span class="tab-label" data-i18n="tab_convert">التحويل</span></button>
+  <button class="tab-btn" data-tab="graph"><span>📊</span><span class="tab-label" data-i18n="tab_graph">الرسم</span></button>
+  <button class="tab-btn" data-tab="settings"><span>⚙️</span><span class="tab-label" data-i18n="tab_settings">الإعدادات</span></button>
+</nav>
+
+<main class="main">
+  <!-- تبويب الحاسبة -->
+  <section id="tab-calc" class="tab-content active">
+    <div class="app">
+      <div class="calculator">
+        <div class="display">
+          <div class="display-top">
+            <div class="indicators">
+              <span class="indicator" id="ind-2nd">2nd</span>
+              <span class="indicator" id="ind-angle">DEG</span>
+              <span class="indicator mem" id="ind-mem">M</span>
+            </div>
+            <button class="copy-btn" id="copyBtn" data-i18n="copy">📋 نسخ</button>
+          </div>
+          <div class="expression" id="expression"></div>
+          <div class="result" id="result">0</div>
+        </div>
+        <div class="memory-row">
+          <button data-action="mc">MC</button>
+          <button data-action="mr">MR</button>
+          <button data-action="m-plus">M+</button>
+          <button data-action="m-minus">M−</button>
+          <button data-action="ms">MS</button>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <aside class="history">
+        <div class="history-header">
+          <h2 data-i18n="history">📜 السجل</h2>
+          <button id="clear-history" data-i18n="clear_all">مسح الكل</button>
+        </div>
+        <div class="history-list" id="history-list">
+          <div class="history-empty" data-i18n="history_empty">لا توجد عمليات بعد</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- تبويب التحويل -->
+  <section id="tab-convert" class="tab-content">
+    <div class="converter-box">
+      <div class="conv-cats" id="conv-cats"></div>
+      <div class="conv-form">
+        <div class="conv-row">
+          <input type="number" id="conv-from-value" value="1" inputmode="decimal">
+          <select id="conv-from-unit"></select>
+        </div>
+        <button class="conv-swap" id="conv-swap">⇅</button>
+        <div class="conv-row">
+          <input type="number" id="conv-to-value" readonly>
+          <select id="conv-to-unit"></select>
+        </div>
+      </div>
+      <div class="conv-note" id="conv-note"></div>
+    </div>
+  </section>
+
+  <!-- تبويب الرسم البياني -->
+  <section id="tab-graph" class="tab-content">
+    <div class="graph-box">
+      <div class="graph-wrap">
+        <canvas id="graph-canvas"></canvas>
+        <div class="graph-controls">
+          <button id="graph-zoom-in" title="Zoom In">＋</button>
+          <button id="graph-zoom-out" title="Zoom Out">－</button>
+          <button id="graph-reset" title="Reset">⟲</button>
+        </div>
+      </div>
+      <div class="func-list" id="func-list"></div>
+      <button class="add-func" id="add-func" data-i18n="add_func">+ إضافة دالة</button>
+      <div class="graph-hint" data-i18n="graph_hint">💡 استخدم x كمتغير. مثال: sin(x), x^2, 1/x, ln(x)</div>
+    </div>
+  </section>
+
+  <!-- تبويب الإعدادات -->
+  <section id="tab-settings" class="tab-content">
+    <div class="settings-box">
+      <div class="setting-group">
+        <h3>🎨 <span data-i18n="colors">الألوان</span></h3>
+        <div class="setting-item">
+          <label data-i18n="primary_color">اللون الرئيسي</label>
+          <input type="color" id="set-accent" value="#3b82f6">
+        </div>
+        <div class="setting-item">
+          <label data-i18n="success_color">لون النتيجة</label>
+          <input type="color" id="set-success" value="#10b981">
+        </div>
+        <div class="setting-item">
+          <label data-i18n="presets">ألوان جاهزة</label>
+          <div class="color-presets" id="color-presets"></div>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <h3>🎛️ <span data-i18n="display">العرض</span></h3>
+        <div class="setting-item">
+          <label data-i18n="language">اللغة</label>
+          <select id="set-lang">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="setting-item">
+          <label data-i18n="theme">المظهر</label>
+          <select id="set-theme">
+            <option value="dark" data-i18n="dark">داكن</option>
+            <option value="light" data-i18n="light">فاتح</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <h3>📱 <span data-i18n="app">التطبيق</span></h3>
+        <div class="pwa-info">✅ <span data-i18n="pwa_ready">التطبيق جاهز للتثبيت كتطبيق مستقل يعمل بدون إنترنت</span></div>
+        <button class="install-btn" id="install-btn" data-i18n="install_app">📲 تثبيت التطبيق</button>
+        <div class="setting-item" style="margin-top:16px;">
+          <label data-i18n="reset_data">إعادة ضبط كل البيانات</label>
+          <button class="danger-btn" id="reset-all" data-i18n="reset_btn">🗑️ إعادة ضبط</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast">✓</div>
+
+<script src="script.js"></script>
+</body>
+            </html>
