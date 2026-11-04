@@ -1,0 +1,25 @@
+{
+  "name": "ANEES Portfolio",
+  "short_name": "ANEES",
+  "description": "الموقع الشخصي لأنيس - طالب تقنية معلومات",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101827",
+  "theme_color": "#2563EB",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/profile.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
