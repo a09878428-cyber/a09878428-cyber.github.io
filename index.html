@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- ==========================================
-         الدمج النووي: وضعنا كود التصميم كامل هنا
-         ========================================== -->
     <style>
         /* 1. الإعدادات العامة */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -270,10 +267,13 @@
 
 <section id="contact" class="contact">
     <h2>تواصل معي</h2>
-    <form class="contact-form">
-        <div class="input-group"><input type="text" placeholder="الاسم الكامل"></div>
-        <div class="input-group"><textarea rows="3" placeholder="رسالتك"></textarea></div>
-        <button type="button" class="submit-btn">إرسال</button>
+    <p style="margin-bottom: 20px;">يسعدني تواصلك معي لأي استفسار أو تعاون.</p>
+    <!-- هنا تم وضع رابط Formspree الخاص بك -->
+    <form action="https://formspree.io/f/xqppgwwz" method="POST" class="contact-form">
+        <div class="input-group"><input type="text" name="name" placeholder="الاسم الكامل" required></div>
+        <div class="input-group"><input type="email" name="email" placeholder="البريد الإلكتروني" required></div>
+        <div class="input-group"><textarea name="message" rows="4" placeholder="رسالتك هنا..." required></textarea></div>
+        <button type="submit" class="submit-btn">إرسال الرسالة</button>
     </form>
     <br>
     <a href="https://wa.me/967779575582" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
